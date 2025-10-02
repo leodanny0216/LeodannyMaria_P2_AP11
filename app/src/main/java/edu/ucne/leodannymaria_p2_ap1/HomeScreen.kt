@@ -33,16 +33,6 @@ fun HomeScreen(navController: NavHostController) {
             ) {
                 Text("Ver Lista de Huacales")
             }
-
-            Spacer(Modifier.height(16.dp))
-
-            Button(
-                onClick = { navController.navigate("huacal_nuevo") },
-                modifier = Modifier.fillMaxWidth(),
-                elevation = ButtonDefaults.buttonElevation(4.dp)
-            ) {
-                Text("Agregar Nuevo Huacal")
-            }
         }
     }
 }

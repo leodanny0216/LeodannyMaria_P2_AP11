@@ -1,15 +1,18 @@
-package edu.ucne.joserivera_ap2_p1.presentation.huacales
+package edu.ucne.leodannymaria_p2_ap1.presentation.huacales
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import edu.ucne.huacales.data.local.entities.EntradaHuacalEntity
 import edu.ucne.huacales.data.repository.EntradaHuacalRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HuacalViewModel(
+@HiltViewModel
+class HuacalViewModel @Inject constructor(
     private val repository: EntradaHuacalRepository
 ) : ViewModel() {
 

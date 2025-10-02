@@ -16,7 +16,6 @@ interface EntradaHuacalDao {
     @Query("SELECT * FROM EntradasHuacales WHERE idEntrada = :id LIMIT 1")
     suspend fun find(id: Int): EntradaHuacalEntity?
 
-    // Consulta con filtros opcionales
     @Query("""
         SELECT * FROM EntradasHuacales
         WHERE (:cliente IS NULL OR nombreCliente LIKE '%' || :cliente || '%')
