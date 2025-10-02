@@ -18,8 +18,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // Crear repositorio manualmente
-        val repository = EntradaHuacalRepository()
+        // Crear DAO y repositorio
+        val database = HuacalDatabase.getDatabase(this)
+        val repository = EntradaHuacalRepository(database.huacalDao())
 
         // Crear ViewModel manualmente
         val viewModel = HuacalViewModel(repository)
@@ -40,3 +41,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
