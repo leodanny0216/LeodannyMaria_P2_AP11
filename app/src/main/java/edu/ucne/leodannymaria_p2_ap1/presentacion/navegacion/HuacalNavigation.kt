@@ -8,6 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import edu.ucne.huacales.data.local.entities.EntradaHuacalEntity
 import edu.ucne.joserivera_ap2_p1.presentation.HomeScreen
+import edu.ucne.leodannymaria_p2_ap1.presentation.huacales.HuacalViewModel
 
 @Composable
 fun HuacalNavigation(
